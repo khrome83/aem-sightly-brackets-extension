@@ -12,6 +12,7 @@ define({
     // Button labels
     BUTTON_OK                                        : 'OK',
     BUTTON_CANCEL                                    : 'Cancel',
+	BUTTON_CREATE									 : 'Create',
 	
     // Menus
     // -- top level
@@ -22,7 +23,7 @@ define({
     // -- contextual menus
     CONTEXTUAL_PULL_REMOTE                           : 'Import from Server',
     CONTEXTUAL_PUSH_REMOTE                           : 'Export to Server',
-	CONTEXTUAL_CREATE_DIALOG						 : 'Create Dialog...',
+	CONTEXTUAL_AEM_GENERATOR						 : 'Create AEM Element...',
 
     // Project Settings dialogue
     PROJECT_SETTINGS                                 : 'Project Settings',
@@ -38,6 +39,10 @@ define({
     PROJECT_SETTING_SERVER_URL_ERROR_INVALID_CHAR    : 'Special characters like \'{0}\' must be %-encoded.',
     PROJECT_SETTING_REMOTE_USER_ERROR_EMPTY          : 'Please provide a username.',
     PROJECT_SETTING_REMOTE_USER_PASSWORD_ERROR_EMPTY : 'Please provide a password.',
+	
+	// Aem Generator dialogue
+	AEM_GENERATOR								 : 'Create Dialog',
+	AEM_GENERATOR_TYPE						     : 'Dialog Type',
 
     // Synchronisation indicator tooltip
     SYNC_FULL                                        : 'All selected files were synced successfully.',

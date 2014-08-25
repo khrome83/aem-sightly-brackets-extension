@@ -18,6 +18,7 @@ define(function (require, exports, module) {
     
     // Load submodules
     var Menu                = require('sly/menu/Menu'),
+		AemGenerator		= require('sly/AemGenerator'),
         SightlyLanguage     = require('sly/SightlyLanguage'),
         BeanManager         = require('sly/BeanManager'),
         SlyCodeHints        = require('sly/SightlyCodeHint'),
@@ -25,6 +26,7 @@ define(function (require, exports, module) {
         RemoteSyncMgr       = require('sly/RemoteSyncManager'),
         ToolBar             = require('sly/toolbar/ToolBar'),
         Preferences         = require('sly/preferences/Preferences'),
+		Generator			= require('sly/generator/Generator'),
         SLYDefault          = require('text!sly/bootstrap/default.json'),
         SLYCQ               = require('text!sly/bootstrap/extensions/cq.json'),
         SLYSling            = require('text!sly/bootstrap/extensions/sling.json'),
@@ -39,7 +41,9 @@ define(function (require, exports, module) {
         try {
             Menu.load(SLYDictionary);
             Preferences.load(SLYDictionary);
+			Generator.load(SLYDictionary);
             RemoteSyncMgr.load(SLYDictionary);
+			AemGenerator.load(SLYDictionary);
             SightlyLanguage.load(SLYDictionary);
             Highlighter.load(SLYDictionary);
             BeanManager.load(SLYDictionary);

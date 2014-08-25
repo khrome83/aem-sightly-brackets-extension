@@ -46,3 +46,59 @@
 #sly-status-aem.sly-status-active {
     background-position: 0px -96px !important;
 }
+
+/*******************************************************************************
+ * CSS for AEM Generator Dialog
+ * by Khrome83 - Zane Milakovic
+ ******************************************************************************/
+.sly .modal-body {
+	position: relative;
+	min-height: 400px;
+}
+
+.sly .side-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 160px;
+	background-color: #efefef;
+	border-right: 1px solid #c3c6c5;
+}
+
+.sly .menu {
+	margin: 10px 0;
+	padding: 0;
+}
+
+.sly .menu li {
+	list-style: none;
+	font-size: 1.1em;
+	line-height: 1.6em;
+	height: 1.6em;
+	padding: 0 0 0 20px;
+	margin: 0;
+	position: relative;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+}
+
+.sly .menu li.active {
+	background-color: #c1c1c1;
+	border-top-color: #b5b5b5;
+	border-bottom-color: #d6d6d6;
+	color: #8fddff;
+}
+
+.sly .menu li.active:after {
+	content: "";
+	position: absolute;
+	right: -12px;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-top: 0.9em solid transparent;
+	border-bottom: 0.9em solid transparent;
+	border-left: 0.9em solid #c1c1c1;
+}
