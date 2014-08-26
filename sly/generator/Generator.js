@@ -18,7 +18,7 @@ define(function (require, exports, module) {
         Dialogs                       = brackets.getModule('widgets/Dialogs'),
         StringUtils                   = brackets.getModule('utils/StringUtils'),
         SlyDomain                     = new NodeDomain('sly', ExtensionUtils.getModulePath(module, '../node/SlyDomain')),
-        ProjectSettingsDialogTemplate = require('text!./aem-generator-dialog.html'),
+        AemGeneratorDialogTemplate 	  = require('text!./aem-generator-dialog.html'),
         Strings                       = require('strings'),
         slyPreferences                = PreferenceManager.getExtensionPrefs('sly'),
         defaults,
@@ -93,9 +93,10 @@ define(function (require, exports, module) {
     }
 
     function openDialogGenerator(errorMessage) {
-        var dialog,
+        var dialog, $d,
             templateVars,
-            formData;
+            formData, panel;
+
         templateVars = {
             Strings : Strings,
             serverUrl : getRemote(),
@@ -103,8 +104,21 @@ define(function (require, exports, module) {
             remoteUserPassword : getRemotePassword(),
             errorMessage : errorMessage
         };
-        dialog = Dialogs.showModalDialogUsingTemplate(Mustache.render(ProjectSettingsDialogTemplate, templateVars));
-        dialog.getElement().find('input')[0].focus();
+
+        dialog = Dialogs.showModalDialogUsingTemplate(Mustache.render(AemGeneratorDialogTemplate, templateVars));
+		$d = dialog._$dlg;
+		
+		$d.find('.menu').on({
+			'click': function(e) {
+				$d.find('.aem-element').removeClass("active");
+				panel = $(this).addClass('active').attr('data-aem-element');
+				$d.find('.section').removeClass("active");
+				$d.find("[data-panel='" + panel + "']").addClass('active');
+			}
+		}, '.aem-element');
+		
+		/*
+		dialog.getElement().find('input')[0].focus();
         dialog.done(function(id) {
             if (id === Dialogs.DIALOG_BTN_OK) {
                 formData = dialog.getElement().find('form').serializeArray();
@@ -122,6 +136,7 @@ define(function (require, exports, module) {
                 }
             }
         });
+		*/
     }
 
     /**

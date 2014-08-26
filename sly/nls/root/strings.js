@@ -41,8 +41,13 @@ define({
     PROJECT_SETTING_REMOTE_USER_PASSWORD_ERROR_EMPTY : 'Please provide a password.',
 	
 	// Aem Generator dialogue
-	AEM_GENERATOR								 : 'Create AEM Element',
-	AEM_GENERATOR_TYPE						     : 'Dialog Type',
+	AEM_GENERATOR									 : 'Create AEM Element',
+	AEM_GENERATOR_TYPE_DIALOG					 	 : 'Create Dialog',
+	AEM_GENERATOR_CREATE_DIALOG						 : 'Dialog',
+	AEM_GENERATOR_CREATE_COMPONENT					 : 'Component',
+	AEM_GENERATOR_CREATE_NODE						 : 'Node',
+	AEM_GENERATOR_CREATE_DIALOG2				     : 'Dialog',
+	
 	
 
     // Synchronisation indicator tooltip

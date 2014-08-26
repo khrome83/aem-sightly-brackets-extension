@@ -51,6 +51,10 @@
  * CSS for AEM Generator Dialog
  * by Khrome83 - Zane Milakovic
  ******************************************************************************/
+.sly.modal {
+	width: 700px;
+}
+
 .sly .modal-body {
 	position: relative;
 	min-height: 400px;
@@ -108,4 +112,22 @@
 	border-top: 11px solid transparent;
 	border-bottom: 11px solid transparent;
 	border-left: 11px solid #2d2e30;
+}
+
+.sly .section {
+	display: none;
+	margin-left: 200px;
+	padding: 20px;
+	height: 390px;
+	width: 460px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow-y: scroll;
+}
+
+.sly .section.active {
+	display: block;
 }
