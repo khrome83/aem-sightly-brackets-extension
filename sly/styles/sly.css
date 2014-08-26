@@ -51,11 +51,11 @@
  * CSS for AEM Generator Dialog
  * by Khrome83 - Zane Milakovic
  ******************************************************************************/
-.sly.modal {
+.sly.generator {
 	width: 700px;
 }
 
-.sly .modal-body {
+.sly.generator .modal-body {
 	position: relative;
 	min-height: 400px;
 }
